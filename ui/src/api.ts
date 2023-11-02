@@ -407,7 +407,7 @@ export async function cancelActiveTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/active_tasks/${taskId}/cancel`,
+    url: `${getBaseUrl()}/queues/${qname}/active_tasks/cancel/${taskId}`,
   });
 }
 
@@ -513,7 +513,7 @@ export async function archivePendingTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/pending_tasks/${taskId}/archive`,
+    url: `${getBaseUrl()}/queues/${qname}/pending_tasks/archive/${taskId}`,
   });
 }
 
@@ -544,7 +544,7 @@ export async function deletePendingTask(
 ): Promise<void> {
   await axios({
     method: "delete",
-    url: `${getBaseUrl()}/queues/${qname}/pending_tasks/${taskId}`,
+    url: `${getBaseUrl()}/queues/${qname}/pending_tasks/delete/${taskId}`,
   });
 }
 
@@ -578,7 +578,7 @@ export async function runScheduledTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/${taskId}/run`,
+    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/run/${taskId}`,
   });
 }
 
@@ -588,7 +588,7 @@ export async function archiveScheduledTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/${taskId}/archive`,
+    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/archive/${taskId}`,
   });
 }
 
@@ -598,7 +598,7 @@ export async function deleteScheduledTask(
 ): Promise<void> {
   await axios({
     method: "delete",
-    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/${taskId}`,
+    url: `${getBaseUrl()}/queues/${qname}/scheduled_tasks/delete/${taskId}`,
   });
 }
 
@@ -674,7 +674,7 @@ export async function runRetryTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/${taskId}/run`,
+    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/run/${taskId}`,
   });
 }
 
@@ -684,7 +684,7 @@ export async function archiveRetryTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/${taskId}/archive`,
+    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/archive/${taskId}`,
   });
 }
 
@@ -694,7 +694,7 @@ export async function deleteRetryTask(
 ): Promise<void> {
   await axios({
     method: "delete",
-    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/${taskId}`,
+    url: `${getBaseUrl()}/queues/${qname}/retry_tasks/delete/${taskId}`,
   });
 }
 
@@ -770,7 +770,7 @@ export async function runArchivedTask(
 ): Promise<void> {
   await axios({
     method: "post",
-    url: `${getBaseUrl()}/queues/${qname}/archived_tasks/${taskId}/run`,
+    url: `${getBaseUrl()}/queues/${qname}/archived_tasks/run/${taskId}`,
   });
 }
 
@@ -780,7 +780,7 @@ export async function deleteArchivedTask(
 ): Promise<void> {
   await axios({
     method: "delete",
-    url: `${getBaseUrl()}/queues/${qname}/archived_tasks/${taskId}`,
+    url: `${getBaseUrl()}/queues/${qname}/archived_tasks/delete/${taskId}`,
   });
 }
 
@@ -835,7 +835,7 @@ export async function deleteCompletedTask(
 ): Promise<void> {
   await axios({
     method: "delete",
-    url: `${getBaseUrl()}/queues/${qname}/completed_tasks/${taskId}`,
+    url: `${getBaseUrl()}/queues/${qname}/completed_tasks/delete/${taskId}`,
   });
 }
 
